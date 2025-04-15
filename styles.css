@@ -1,0 +1,167 @@
+/*Background*/
+body {
+    background-color: #DC2F02;
+    overflow:hidden;
+}
+
+/*Background Image, immovable*/
+.bg-image {
+    background-image: url("images/background.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    aspect-ratio: 16 / 9;
+    overflow-y: scroll;
+}
+
+/*Navigation Bar*/
+.nav-bar {
+    background-color: #BF2633;
+    overflow: hidden;
+}
+.nav-bar a {
+    float: left;
+    text-align: center;
+    padding: auto;
+    font-size: 18px;
+}
+/*Button for Links*/
+.link-button {
+    background-color: #BF2633;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 11px;
+    text-decoration: none;
+    padding: 3px 7px;
+    transition: background-color 0.2s ease;
+    height: 100%;
+    display: flex;
+}
+.link-button:hover {
+    background-color: #F24130;
+}
+
+/*Main Body*/
+.article {
+    background-color: #F2935C;
+    width: 76%;
+    padding: 18px;
+    margin-top: 47px;
+    margin-bottom: 47px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+/*Chart*/
+.chart-container {
+    width: 76%;
+    margin: 0 auto;
+}
+
+/*Information*/
+.info-div {
+    width: 76%;
+    margin: 0 auto;
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 76%;
+    margin-top: 3;
+}
+
+/*Line Break*/
+hr {
+    background-color: #D95204;
+    height: 3px;
+    border: 0px;
+}
+
+/*Fonts*/
+h1 {
+    font-family: 'Libre Baskerville';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 123px;
+    margin-top: 0px;
+    margin-bottom:0px;
+    text-align: center;
+}
+h2 {
+    font-family: 'Libre Baskerville';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 47px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: center;
+}
+h3 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 11px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    text-align: left;
+}
+h4 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 29px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+h5 {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+/* size per golden ratio
+    0 , 1 , 3 , 4 , 7 , 11 , 18 , 29 , 47 , 76 , 123 , 199 , 521 , 843 , 1364
+font-weight:
+    100 to 900
+    normal, bold, bolder, lighter
+font-style:
+    normal: Standard upright text.
+    italic: Italicized text.
+    oblique: Similar to italic but typically less slanted and can use a different font.
+*/
+
+/*Citation*/
+.cit-div {
+    display:flex;
+    justify-content: center;
+    margin: auto;
+    width: 76%;
+}
+
+h6 {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 11px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    text-indent: -40px;
+    padding-left: 40px;
+}

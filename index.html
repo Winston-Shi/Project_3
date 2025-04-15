@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--Character Encoder-->
+        <meta charset="utf-8">
+        <!--Control Appearance on Different Devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Libre Baskerville Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <!--Monserrat Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!--Video Icon-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_circle" />
+        <!--Chart Script-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!--Style Sheet-->
+        <link href="styles.css" rel="stylesheet"/>
+        <!-- Website Title-->
+        <title>test</title>
+    </head>
+
+    <body>
+        <div class="bg-image">
+            <!--Navigation Bar-->
+            <div class="nav-bar">
+                <a class="link-button" href="https://www.linkedin.com/in/winstonwshi/" target="_blank">
+                    Winston Shi
+                </a>
+                <a class="link-button" href="https://www.youtube.com/watch?v=Djtsw5k_DNc" target="_blank">
+                    <span class="material-symbols-outlined">
+                        play_circle
+                    </span>
+                </a>
+            </div>
+
+            <div class="article">
+                <!--Title-->
+                <header>
+                    <h1>Nursing Homes</h1>
+                    <h2>How Abandoning Our Past Hurts Our Future</h2>
+                    <h3>April 10, 2025, 8:18 AM EDT</h3>
+                </header>
+
+                <hr>
+
+                <!--Inforamation-->
+                <main>
+                    <img src="images/nurse.jpg" class="img-div">
+
+                    <div class="info-div">
+                        <h4> Nurses and their Struggles </h4>
+                        <h5>
+                            In March of 2023, the International Council of Nurses (ICN) released a report that called out a worldwide shortage of nurses in the medical field that could lead to a global health emergency. This was caused by the pandemic which greatly effected the nursing profession by increasing burnout and reducing access to care. The pandemic combined with the lack of staffing increase the stress of workers and drastically decreased their satisfaction leading many to leave the profession propegating the understaffing issue. In October 2023, more than a quarter of all nurses had plans to leave the profession. It was observed that nurses employed in this setting had the lowest levels of job satisfaction. It doesn't help that in this century most of the established Nurses in the United States are nearing their retirement as well. According to the National Sample Survey of Registered Nurses in 2022, 23% of Registered Nurses planned to retire in the next 5 years.
+                            <br><br>
+                            In April 2022, a nursing workforce analysis was conducted in health affairs that from 2020 to 2021 had a 100,000 decrease in Registered Nurses, the biggest drop in the past four decades. According to a Health Workforce Analysis by the HRSA (Health Resources and Services Administration) in November 2022,there was a projected shortage of ~79,000 full-time Registered Nurses by 2025 and ~64,000 full-time Registered Nurses by 2030. The Bureau also projects ~193,000 openings for Registered Nurses each year until 2032.
+                            <br><br>
+                            The system is not helping with midigating these problems at the moment as in 2022 in a Nurse Salary Research Report, 29% of nurses across all license types considering leaving in 2021, compared with 11% in 2020. The biggest reason that stopped them from leaving was the higher pay.
+                            <br><br>
+                            The issues these nurses pointed out as a problem were:
+                            <ul>
+                                <li>lack of support</li>
+                                <li>No work-life balance</li>
+                                <li>Unreasonable workload</li>
+                            </ul>
+                            The ten states with the largest projected nursing shortage in 2035 are:
+                        </h5>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="nursingShortageChart"></canvas>
+                    </div>
+
+                    <script>
+                        const ctx = document.getElementById('nursingShortageChart').getContext('2d');
+                        const nursingShortageChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: [
+                                    'Washington', 'Georgia', 'California', 'Oregon','Michigan', 'Idaho', 'Louisiana', 'North Carolina', 'New Jersey', 'South Carolina'
+                                ],
+                                datasets: [{
+                                    label: 'Projected Shortage (%)',
+                                    data: [26, 21, 18, 16, 15, 15, 13, 13, 12, 11],backgroundColor: '#731702'
+                                }]
+                            },
+                            options: {
+                                indexAxis: 'y',
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        max: 30,
+                                        ticks: {
+                                            color: '#000000',
+                                            callback: value => `${value}%`,
+                                        }
+                                    },
+                                    y: { ticks: { color: '#000000' }}
+                                },
+                                plugins:{
+                                    tooltip:{
+                                        callbacks:{
+                                            label: context => `${context.parsed.x}%`
+                                        }
+                                    },
+                                    legend: { labels: { color: '#000000' }}
+                                }
+                            }
+                        });
+                    </script>
+
+                    <br><br>
+
+                    <img src="images/class.jpg" class="img-div">
+
+                    <div class="info-div">
+                        <h4> The Bottleneck of the Nursing Industry </h4>
+                        <h5>
+                            When we look at the vacant Nursing positions compared to the students enrolled in Nursing school enrollment we will see that the the projected graduating nurses will not meet the demands for Registered Nurses and Advance Practice Registered Nurses. In 2023 there was a reported from of 3.1% for Nurses pursing their PhD and 0.9% for nurses pursing their Masters. These trends raise major concerns on nursing schools and their ability to meet the projected demand for students as they lack the open capcity for nurse and research faculty. According to reports from 2023 to 2024 for enrollment and graduation it was estimated that ~66,000 of qualified applications were turned away from nursing programs due to:
+                            <ul>
+                                <li>Insufficient number of faculty members</li>
+                                <li>Lack of clinical sites to train at</li>
+                                <li>Lack of classroom space</li>
+                                <li>Shortage of Clinical Preceptors</li>
+                                <li>Lack of funds</li>
+                            </ul>
+
+                        </h5>
+                    </div>
+
+                    <br><br>
+
+                    <img src="images/elderneglect.jpg" class="img-div">
+
+                    <div class="info-div">
+                        <h4> The Toll on the Elderly </h4>
+                        <h5>
+                            <ul>
+                                <li>The U.S. Census Bureau reported that the number of Americans aged 65 and older is projected to increase from 58 million in 2022 to 82 million by 2050 (23% of the population).</li>
+                                <li>Lack of Personalized Care – Many nursing homes are understaffed, leading to inadequate attention for each resident. This can result in neglect, poor hygiene, and insufficient medical care.</li>
+                                <li>Social Isolation & Depression – Elderly residents often experience loneliness and emotional distress due to limited family visits, lack of personal autonomy, and being surrounded by unfamiliar people.</li>
+                                <li>Risk of Abuse & Neglect – Cases of elder abuse, whether physical, emotional, or financial, have been reported in some nursing homes. Overworked or untrained staff may also neglect residents' needs, leading to deteriorating health and well-being.</li>
+                                <li>Lack of Personalized Care – Many nursing homes are understaffed, leading to inadequate attention for each resident. This can result in neglect, poor hygiene, and insufficient medical care.</li>
+                                <li>Social Isolation & Depression – Elderly residents often experience loneliness and emotional distress due to limited family visits, lack of personal autonomy, and being surrounded by unfamiliar people.</li>
+                                <li>Risk of Abuse & Neglect – Cases of elder abuse, whether physical, emotional, or financial, have been reported in some nursing homes. Overworked or untrained staff may also neglect residents' needs, leading to deteriorating health and well-being.</li>
+                                <li>Unfamiliar Environment – Being placed in a new setting away from their home and community can make elderly individuals feel disconnected.</li>
+                                <li>Difficulty Making New Friends – Some residents struggle to build relationships due to cognitive decline, mobility issues, or language barriers.</li>
+                                <li>Restrictive Schedules & Policies – Nursing homes may have strict visiting hours, meal times, and activity schedules that limit social opportunities.</li>
+                                <li>Limited Family Visits – Many elderly residents receive infrequent visits from family and friends due to distance, busy schedules, or facility restrictions.</li>
+                                <li>Loss of Independence – Moving into a nursing home often means losing control over daily routines, leading to feelings of helplessness and isolation.</li>
+                                <li>Health Decline & Mobility Issues – Physical and cognitive impairments can make it harder for residents to engage in social activities or communicate effectively.</li>
+                                <li>High Staff Turnover – Frequent changes in caregivers can prevent residents from forming meaningful connections with staff members.</li>
+                                <li>Emotional Impact of Losing Peers – Seeing friends and fellow residents pass away can contribute to feelings of loneliness and grief.</li>
+                                <li>Understaffing & Overwork – Long hours and high workloads can lead to burnout, frustration, and lower-quality care.</li>
+                                <li>Low Wages & Financial Struggles – Some caregivers may resort to theft due to personal financial difficulties.</li>
+                                <li>Lack of Supervision & Accountability – Poor oversight allows unethical staff members to mistreat residents without consequences.</li>
+                                <li>High Staff Turnover – Frequent changes in staff can disrupt continuity of care and make it harder to detect abuse or theft.</li>
+                                <li>Loss of Independence – Moving into a nursing home often means giving up control over daily routines, leading to feelings of helplessness.</li>
+                                <li>Lack of Purpose – Many elderly residents feel they no longer contribute meaningfully to society or their families.</li>
+                                <li>Grief & Loss – The death of spouses, friends, or family members can lead to prolonged sadness and isolation.</li>
+                                <li>Cognitive Decline</li>
+                                <li>Lack of Mental Stimulation – Fewer opportunities for engagement, such as reading, problem-solving, or conversation, can contribute to cognitive deterioration.</li>
+                                <li>Medication Side Effects – Some medications used in nursing homes can cause drowsiness, confusion, or memory problems.</li>
+                                <li>Neglect or Lack of Proper Care – Poor nutrition, dehydration, and lack of exercise can accelerate cognitive decline.</li>
+                            </ul>
+                        </h5>
+                    </div>
+
+                    <br><br>
+
+                    <img src="images/whitehouse.jpg" alt="nurse depressed" class="img-div">
+
+                    <div class="info-div">
+                        <h4> The Changes we Need </h4>
+                        <h5>
+                            There is a change needed to be done within our system to stop it from imploding on itself. Nurses need better work right protections and better care as they are not only an investment but a pillar in the medical industry system.
+                        </h5>
+                    </div>
+                </main>
+
+                <br>
+
+                <hr>
+
+                <!--Citations-->
+                <footer>
+                    <h4 style="text-align:center;"> Work Cited </h4>
+                    <div class="cit-div">
+                        <h6>
+                            Rosseter, Robert. "Home." <em>Nursing Shortage Fact Sheet</em>, American Association of College of Nursing, May 2024,
+                            <br>
+                            www.aacnnursing.org/news-data/fact-sheets/nursing-shortage.
+                        </h6>
+                    </div>
+
+                    <br><br><br>
+
+                    <p>
+                        https://www.aacnnursing.org/news-data/fact-sheets/nursing-shortage
+                        <br>
+                        https://investor.genworth.com/news-events/press-releases/detail/972/genworth-releases-cost-of-care-survey-results-for-2023
+                        <br>
+                        https://www.mcknights.com/news/survey-shows-how-much-long-term-care-costs-continue-to-climb/
+                        <br>
+                        https://skillednursingnews.com/2024/03/nursing-homes-see-highest-cost-increase-in-2023-driven-by-worker-shortage/
+                    </p>
+
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
